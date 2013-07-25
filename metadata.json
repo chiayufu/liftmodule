@@ -1,8 +1,10 @@
 {
-	"name":"Lift Module",
-	"thumbnail":"liftmodule.png",
-	"screenshot":"liftmodule.png",
-	"pageTypes":["home"],
+    "name":"Lift Module",
+    "thumbnail":"liftmodule.png",
+    "screenshot":"liftmodule.png",
+    "pageTypes":["home"],
+    "defaultColorSwatch":"Dud 2",
+    "defaultFontSwatch":"Lato",
     "colorSwatches":
     {
         "Swatch 1": {
@@ -52,9 +54,9 @@
         }
     },
     "fontSwatch": {
-       "title": "Karla",
+       "title": "Open Sans",
         "font1": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "20px",
             "font-weight": "400",
             "line-height": "24px",
@@ -62,7 +64,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "24px",
             "font-weight": "inherit",
             "line-height": "36px",
@@ -70,7 +72,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "34px",
@@ -78,7 +80,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "18px",
             "font-weight": "inherit",
             "line-height": "34px",
@@ -86,7 +88,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -94,7 +96,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -102,7 +104,7 @@
             "letter-spacing": "inherit"
         },
         "font7": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "32px",
@@ -110,7 +112,7 @@
             "letter-spacing": "inherit"
         },
         "font8": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "32px",
@@ -118,7 +120,7 @@
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "Karla",
+            "font-family": "Open Sans",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
