@@ -31,7 +31,6 @@ a:hover {
 
 h1, h2, h3, h4, h5, p {
   margin: 0;
-  padding: 0 0 10px;
 }
 
 h1 {
@@ -114,6 +113,13 @@ blockquote {
    CUSTOM CSS
    =============================== */
 
+.main {
+  padding: 50px 0;
+}
+
+body.edit .widget.navigation, body.edit .widget.extendednavigation {
+  overflow: visible;
+}
 
 
 /* ===============================
@@ -125,53 +131,33 @@ header {
   background-color: @color-swatch7;
 }
 
-.widget.companyheader .company-name h1 {
-  font-size:@font-swatch1-font-size;
-  line-height:@font-swatch1-line-height;
+.companyheader {
+  display: block;
+  float: left;
+  padding: 22px 0;
+}
+
+/* COMPANY NAME */
+
+.widget.companyname {
+  display: block;
+  float: left;
+  margin-top: 5px;
+}
+
+.widget.companyname h1 {
   margin: 0;
   padding: 0;
+  font-size: bkscale(@font-swatch1-font-size,0.8);
+  letter-spacing: -1px;
 }
 
-.widget.companyheader {
-  float: left;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 21px 0px;
-}
+/* LOGO */
 
-.widget.companyheader .logo {
+.widget.logo {
   display: block;
   float: left;
-  margin-right: 8px;
-}
-
-.widget.companyheader:before,
-.widget.companyheader:after {
-  content: " ";
-  display: table;
-}
-
-.widget.companyheader:after {
-  clear: both;
-}
-
-.widget.companyheader {
-  *zoom: 1;
-}
-
-.widget.companyheader .logo img {
-  max-width: 100%;
-  height: auto;
-}
-
-.widget.companyheader .logo-bottom {
-  display: none;
-}
-
-.widget.companyheader .company-name {
-  display: block;
-  float: left;
-  margin-top: 12px;
+  margin-right: 10px;
 }
 
 /* ===============================
@@ -196,11 +182,31 @@ footer p {
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
   padding-bottom: 20px;
+  max-width: 450px;
 }
 
 footer span {
   color: @color-swatch1;
 }
+
+footer .widget.socialicons {
+  padding: 0;
+}
+
+/* FOOTER PROFILE STYLES */
+
+footer p, footer .widget.profile span {
+  font-family: @font-swatch5-font-family;
+  color: lighten(@color-swatch5,10%);
+  line-height:@font-swatch5-line-height;
+  font-weight: 200;
+}
+
+.widget.profile ul.twitter {
+  padding: 0;
+  margin: 0;
+}
+
 
 /* ===============================
    STANDARD NAVIGATION
@@ -398,7 +404,8 @@ footer span {
    =============================== */
 
  .widget.feature {
-  padding: 50px 0 0;
+  padding: 0;
+  margin-bottom: 50px;
 }
 
 .widget.feature .feature-bgimg {
@@ -414,7 +421,7 @@ footer span {
 }
 
 .widget.feature .content .spare {
-  max-width: 380px;
+  max-width: 400px;
   padding: 40px;
   margin: 0 auto;
   background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.7); 
@@ -565,7 +572,7 @@ footer span {
 
 .widget.button button
 {
-  margin: 1em 0;
+  margin: 0.5em 0;
   padding: 11px 26px;
   border: 0;
   -webkit-border-radius: 4px;
@@ -718,7 +725,7 @@ footer span {
 
 .widget.gallery ul {
     display:block;
-    margin: 20px 0;
+    margin: 0;
     padding:0px;
     list-style: none;
 }
@@ -726,18 +733,21 @@ footer span {
 .widget.gallery li {
     float: left;
     position: relative;
-    width: 32%;
-    margin-bottom: 20px;
+    width: 33.3%;
+    padding-bottom: 33%;
 }
 
-.widget.gallery .inner {
-    background-image: none !important;
-}
-
-.widget.gallery li span.inner {
-    background-position: top center;
+.widget.gallery li  span.inner {
+    background-position:center center;
     background-repeat:no-repeat;
     background-color: @color-swatch1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
 }
 
 .widget.gallery ul li.one-to-one span.inner
@@ -756,16 +766,17 @@ footer span {
 }
 
 .widget.gallery li span.inner {
-    
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 0px;
+    bottom: 16px;
     overflow: hidden;
 }
 
 .widget.gallery li span.inner img {
-    width: 100%;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-} 
+    display:none;
+}
 
 .widget.gallery ul:before,
 .widget.gallery ul:after {
@@ -779,11 +790,13 @@ footer span {
   *zoom: 1;
 }
 
-.widget.gallery li span.inner .title {
+.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: -50px;
+    background:@color-swatch1;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     text-align: center;
@@ -795,15 +808,23 @@ footer span {
     font-size:@font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
     line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
+    color:@color-swatch1;
     letter-spacing: @font-swatch5-letter-spacing;
 }
 .widget.gallery li span.inner:hover .title {
-
+   margin-bottom: 0;
 }
 
 .widget.gallery li span.inner .description {
+  display: none;
+}
 
+.widget.gallery li span.inner a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* ===============================
@@ -939,7 +960,7 @@ hr.line.align-right {
 
 .widget.twitter {
   padding: 30px;
-  margin: 20px 0;
+  margin: 0;
   background-color: @color-swatch1;
   border: 1px solid darken(@color-swatch1,10%);
   -webkit-border-radius: 4px;
@@ -991,7 +1012,7 @@ hr.line.align-right {
 .widget.twitter .twitter-profile-pic {
     float: left;
     margin-right: 20px;
-    height: 110px;
+    height: 100px;
 }
 
 .widget.twitter .twitter-profile-pic a {
@@ -1011,7 +1032,7 @@ hr.line.align-right {
 .widget.contactform form {
     display: block;
     padding: 30px;
-    margin: 0 0 20px;
+    margin: 0;
     background-color: @color-swatch1;
     border: 1px solid darken(@color-swatch1,10%);
     -webkit-border-radius: 4px;
@@ -1031,7 +1052,7 @@ hr.line.align-right {
     font-size:font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
     line-height:@font-swatch4-line-height;
-    color:@color-swatch3;
+    color:@color-swatch2;
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
@@ -1152,51 +1173,46 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 8px 10px 8px 32px;
-  margin: 0;
-  border: none;
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 10px;
-
-  margin: 2.2em auto;
-  border: 0;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
-
-  font-family: @font-swatch2-font-family;
-  font-size:.9em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch2;
-  color: @color-swatch1;
-  text-decoration: none;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    background-image: image('/images/twitter.png');
+    background-position: 14px center;
+    background-repeat: no-repeat; 
+    text-indent: 6px;
+    margin: 1em 0 0em;
+    padding: 11px 16px 11px 34px;
+    border: 0;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
+    font-size: .9em;
+    font-weight:@font-swatch7-font-weight;
+    background-color: @color-swatch2;
+    color: @color-swatch1;
+    text-decoration: none;
+    background-position: 14px center;
 }
 
-.widget.tweet a:hover, .tweet a:active {
-  padding: 8px 10px 8px 32px;
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 10px;
+.widget.tweet a:hover {
+  background-color: darken(@color-swatch2,5%);
+  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
   cursor: pointer;
-  background-color: @color-swatch2;
-  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
-
 
 /* ===============================
    SOCIAL BAR WIDGET
    =============================== */
 
 .widget.socialicons {
-    padding: 0px;
+    padding: 4px 0;
     font-family:@font-swatch7-font-family;
 }
 
 .widget.socialicons a {
-    margin: 1em 0;
+    margin: 1em 0 0em;
     padding: 11px 16px 11px 26px;
     border: 0;
     -webkit-border-radius: 4px;
@@ -1229,7 +1245,7 @@ hr.line.align-right {
 }
 
 .widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.png')
+    background-image: image('/images/socialicons-twitter.png');
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a {
@@ -1251,11 +1267,129 @@ hr.line.align-right {
 .widget.socialicons span.bk-socialicons-youtube a {
     background-image: image('/images/socialicons-youtube.png');
 }
+
+
+/* ===============================
+   PROFILE WIDGET
+   =============================== */
+
+.widget.profile span {
+  display: block;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  line-height: @font-swatch5-line-height;
+  color: @font-swatch5-color;
+}
+
+
+/* ===============================
+   MAP WIDGET
+   =============================== */
+
+.widget.map  {
+    padding: 30px;
+    margin: 0;
+    background-color: @color-swatch1;
+    border: 1px solid darken(@color-swatch1,10%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.map .map {
+
+}
+
+
+/* ===============================
+   SIGNUP FORM WIDGET
+   =============================== */
+
+.widget.signupform {
+  padding: 0px;
+}
+
+.widget.signupform fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.signupform label {
+    font-family:@font-swatch1-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch4;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+.widget.signupform fieldset input {
+    height: 42px;
+    background-color: lighten(@color-swatch5,46%);
+    border: 1px solid lighten(@color-swatch5,40%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.widget.signupform fieldset input:focus {
+  outline: none;
+}
+
+.widget.signupform button {
+  margin: 0;
+  padding: 13px 22px;
+  border: 1px solid darken(@color-swatch2,2%);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
+
+  font-family: @font-swatch7-font-family;
+  font-weight:@font-swatch7-font-weight;
+  color: @font-swatch7-color;
+  letter-spacing: 3px;
+  font-size: .9em;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+
+  background: @color-swatch2; 
+  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
+  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
+  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+}
+
+.widget.signupform button:hover {
+  cursor: pointer;
+  background-color: @color-swatch2;
+}
+
+.widget.signupform button:active {
+  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
+}
+
+
+
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next{
+  width: 36px;
+  height: 20%;
+}
+
 .widget.responsiveslideshow .slideshow-image-list {
-    height: 300px;
+    height: 640px;
 }
 
 .widget.responsiveslideshow .slideshow-widget {
@@ -1310,22 +1444,48 @@ hr.line.align-right {
     font-size: 0;
     z-index: 11;
     text-indent: -99999px;
+    background-color: @color-swatch1;
+    border: 1px solid darken(@color-swatch1,10%);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev {
-  left: 10px;
-  background: image('/images/slideshow-arrow-left.png') no-repeat center left;
-  background-size: contain;
+  background-image: image('/images/slideshow-arrow-left.png');
+  left: -37px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 0;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
-  right: 10px;
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right; 
-  background-size: contain;   
+  right: -37px;
+  background-image: image('/images/slideshow-arrow-right.png'); 
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;  
+  border-left: 0;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
-  margin-top: 10px;
+  padding: 12px;
+  background-color: @color-swatch1;
+  border: 1px solid darken(@color-swatch1,10%);
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  max-width: 20%;
+  margin: 0 auto;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play
@@ -1345,13 +1505,18 @@ hr.line.align-right {
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
 {
-    border:none;
-    background:transparent image('/images/slideshow-dot-not-selected.png') center no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: lighten(@color-swatch5,10%);
+    border-radius: 50%;
+  width: 13px;
+  height: 13px; 
+  margin: 0 2px;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot.selected
 {
-    background:transparent image('/images/slideshow-dot-selected.png') center no-repeat;
+    background-color: @color-swatch3;
 }
 
 /* ===============================
@@ -1359,6 +1524,27 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 768px) {
+
+  /* SLIDESHOW */
+
+  .widget.responsiveslideshow .slideshow-image-list {
+    height: 350px;
+  }
+    
+  .widget.responsiveslideshow .slideshow-widget .btn-prev, 
+  .widget.responsiveslideshow .slideshow-widget .btn-next {
+      background-color: transparent;
+    border: none;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-controls {
+    padding: 8px;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-controls .dot {
+    height: 10px;
+    width: 10px;
+   }
 
   /* NAV */
 
@@ -1440,10 +1626,6 @@ hr.line.align-right {
 
   /* FEATURE */
 
-  .widget.feature {
-    padding: 40px 0 0;
-  }
-
    .widget.feature .feature-bgimg {
     height: 320px;
    }
@@ -1456,23 +1638,22 @@ hr.line.align-right {
     height:200px;
   }
 
-}
+  /* CONTACT FORM */
 
-@media only screen and (max-width : 650px) and (min-width : 481px) {
-   /* Tablet view: 2 tiles */
-   .widget.gallery li {
+  .widget.contactform fieldset input {
+  width: 100%;
+  }
+
+  /* GALLERY */
+
+  .widget.gallery ul.gallery-widget li
+  {
       width: 50%;
-      /*padding-bottom: 50%;*/
-   }
+      padding-bottom: 50%;
+  }
+
 }
 
-@media only screen and (max-width : 1050px) and (min-width : 651px) {
-   /* Small desktop / ipad view: 3 tiles */
-   .widget.gallery li {
-      width: 33.3%;
-      /*padding-bottom: 33.3%;*/
-   }
-}
 
 /* ===============================
    IPHONE WIDTH
@@ -1480,12 +1661,19 @@ hr.line.align-right {
 
 @media only screen and (max-width: 480px) {
 
+  .main {
+    padding: 20px 0;
+  }
+
   /* COMPANY HEADER */
 
   .widget.companyheader .company-name h1 {
     font-size:bkscale(@font-swatch1-font-size, 0.8)
   }
 
+  footer {
+    padding: 3em 0;
+  }
 
   /* UL ALIGN RIGHT */
 
@@ -1497,7 +1685,7 @@ hr.line.align-right {
   /* FEATURE */
 
   .widget.feature {
-    padding: 20px 0 0;
+    margin-bottom: 20px;
   }
 
   .widget.feature .feature-bgimg {
@@ -1514,8 +1702,9 @@ hr.line.align-right {
 
   .widget.feature h2 {
     margin-bottom: 20px;
+    line-height: 1.2; 
+    border-bottom: 0;
   }
-
 
   /* SLIDESHOW */
   .widget.responsiveslideshow .title {
@@ -1524,6 +1713,12 @@ hr.line.align-right {
 
   .widget.responsiveslideshow .description {
     display:none;
+  }
+
+  /* FORMS */
+
+  .widget.contactform form, .widget.twitter, .widget.map {
+      padding: 20px;
   }
 
 
@@ -1561,47 +1756,11 @@ hr.line.align-right {
     text-decoration: none;
   }
 
-  .widget.clicktocall a.justifyleft {
-    text-align: left;
-  }
-
-  .widget.clicktocall a.justifycenter {
-    text-align: center;
-  }
-
-  .widget.clicktocall a.justifyright {
-    text-align: right;
-  }
-
-  .widget.clicktocall a.justifyfull {
-    text-align: justify;
-  }
-
-  .widget.clicktocall a.italic { 
-    font-style: italic;
-  }
-
-  .widget.clicktocall a.bold {
-    font-weight: bold;
-  }
-
   .widget.clicktocall {
     padding: 20px 0;
     display:block;
   }
 
-  /* GALLERY */
-
-  .widget.gallery p
-  {
-    padding: 10px;
-  }
-
-  /* Smartphone view: 1 tile */
-  .widget.gallery li {
-      width: 100%;
-      padding-bottom: 100%;
-  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1623,116 +1782,6 @@ hr.line.align-right {
   *zoom: 1;
 }
 
-#featuregallery .widget.gallery  .gallery-widget {
-	list-style: none;
-	margin: 30px auto;
-	padding: 0;
-}
-
-#featuregallery .widget.gallery ul {
-    background-color:transparent;
-}
-
-#featuregallery .widget.gallery .gallery-widget li {
-	display: block;
-	float: left;
-	width: 31.3%;
-    padding:1%;
-	opacity: 0;
-}
-
-#featuregallery .widget.gallery .title,
-#featuregallery .widget.gallery .description {
-    display:none;
-}
-
-#featuregallery .widget.gallery li span.inner {
-    position: static;
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    overflow:visible;
-    background:none!important;
-}
-
-#featuregallery .widget.gallery li span.inner img  {
-    display:inline;
-}
-
-#featuregallery .widget.gallery .gallery-widget li.shown,
-.no-js #featuregallery .widget.gallery  .gallery-widget li,
-.no-cssanimations #featuregallery .gallery-widget li {
-	opacity: 1;
-}
-
-#featuregallery .widget.gallery .gallery-widget li img {
-	outline: none;
-	border: none;
-	display: block;
-	max-width: 100%;
-}
-
-/* Effect 2: Move Up */
-#featuregallery .widget.gallery  .gallery-widget li.animate {
-	-webkit-transform: translateY(200px);
-	-moz-transform: translateY(200px);
-	transform: translateY(200px);
-	-webkit-animation: moveUp 0.65s ease forwards;
-	-moz-animation: moveUp 0.65s ease forwards;
-	animation: moveUp 0.65s ease forwards;
-}
-
-@-webkit-keyframes moveUp {
-	to { -webkit-transform: translateY(0); opacity: 1; }
-}
-
-@-moz-keyframes moveUp {
-	to { -moz-transform: translateY(0); opacity: 1; }
-}
-
-@keyframes moveUp {
-	to { transform: translateY(0); opacity: 1; }
-}
-
-@media screen and (max-width: 900px) {
-	#featuregallery .widget.gallery  .gallery-widget li {
-		width: 47.5%;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	#featuregallery .widget.gallery .gallery-widget li {
-		width: 96%;
-	}
-}
-
-/* Animation for isotope moves */
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
-}
 
 
 

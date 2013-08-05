@@ -1,10 +1,7 @@
 {
-    "name":"Lift Module",
-    "thumbnail":"liftmodule.png",
-    "screenshot":"liftmodule.png",
-    "pageTypes":["home"],
-    "defaultColorSwatch":"Dud 2",
-    "defaultFontSwatch":"Lato",
+	"name":"Lift Module",
+	"thumbnail":"liftmodule.png",
+	"screenshot":"liftmodule.png",
     "colorSwatches":
     {
         "Swatch 1": {
@@ -17,54 +14,54 @@
             "color7":"#313131"
         },
         "Swatch 2": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f8f9fa",
+            "color2":"#e67c67",
+            "color3":"#94cc5c",
+            "color4":"#838383",
+            "color5":"#acacac",
+            "color6":"#ffffff",
+            "color7":"#222429"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color2":"#99d1ac",
+            "color3":"#919ed2",
+            "color4":"#717480",
+            "color5":"#a4a5aa",
+            "color6":"#ffffff",
+            "color7":"#292c35"
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color2":"#e06345",
+            "color3":"#55acaa",
+            "color4":"#838383",
+            "color5":"#acacac",
+            "color6":"#ffffff",
+            "color7":"#404041"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color1":"#f6f6f6",
+            "color2":"#ff6861",
+            "color3":"#96d3ed",
+            "color4":"#838383",
+            "color5":"#acacac",
+            "color6":"#ffffff",
+            "color7":"#465568"
         }
     },
     "fontSwatch": {
-       "title": "Open Sans",
+       "title": "Karla",
         "font1": {
-            "font-family": "Open Sans",
-            "font-size": "20px",
+            "font-family": "Karla",
+            "font-size": "30px",
             "font-weight": "400",
-            "line-height": "24px",
+            "line-height": "38px",
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "24px",
             "font-weight": "inherit",
             "line-height": "36px",
@@ -72,7 +69,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "34px",
@@ -80,7 +77,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "18px",
             "font-weight": "inherit",
             "line-height": "34px",
@@ -88,7 +85,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -96,7 +93,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -104,7 +101,7 @@
             "letter-spacing": "inherit"
         },
         "font7": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "32px",
@@ -112,17 +109,24 @@
             "letter-spacing": "inherit"
         },
         "font8": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "18px",
             "font-weight": "400",
-            "line-height": "32px",
+            "line-height": "28px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "Open Sans",
+            "font-family": "Karla",
             "font-size": "16px",
             "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}
+: "400",
             "line-height": "26px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
