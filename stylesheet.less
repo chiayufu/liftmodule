@@ -82,30 +82,43 @@ p
   letter-spacing: @font-swatch5-letter-spacing;
 }
 
+ul, ol, li {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
 blockquote {
   background: lighten(@color-swatch5,20%);
-  border-left:6px solid @color-swatch2;
   margin:0;
   padding: 14px 16px;
   quotes:"\201C""\201D""\2018""\2019";
 }
-  blockquote:before {
-  font-family: georgia;
-  color: @color-swatch2;
-  content:open-quote;
-  font-size:4em;
-  line-height:.1em;
-  margin-right:.1em;
-  vertical-align:-.4em;
-}
-  blockquote p {
-  display: inline;
-  font-style: italic;
+
+blockquote {
+  background: darken(@color-swatch1,5%);
+  border: 1px solid darken(@color-swatch1,10%);
+  margin:0;
+  padding: 20px;
+  quotes:"\201C""\201D""\2018""\2019";
   font-family:@font-swatch5-font-family;
   font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
   line-height:@font-swatch5-line-height;
   color:@font-swatch5-color;
+}
+
+blockquote:before {
+  font-family: georgia;
+  color: @font-swatch5-color;
+  content:open-quote;
+  font-size:4em;
+  line-height:.1em;
+  margin-right:.1em;
+  vertical-align:-.4em;
 }
 
 
@@ -149,7 +162,13 @@ header {
   margin: 0;
   padding: 0;
   font-size: bkscale(@font-swatch1-font-size,0.8);
-  letter-spacing: -1px;
+  color: @color-swatch1;
+ /* font-family:@font-swatch10-font-family;
+  font-size:@font-swatch10-font-size;
+  font-weight: @font-swatch10-font-weight;
+  line-height:@font-swatch10-line-height;
+  color:@font-swatch10-color;
+  letter-spacing: @font-swatch10-letter-spacing;*/
 }
 
 /* LOGO */
@@ -189,23 +208,6 @@ footer span {
   color: @color-swatch1;
 }
 
-footer .widget.socialicons {
-  padding: 0;
-}
-
-/* FOOTER PROFILE STYLES */
-
-footer p, footer .widget.profile span {
-  font-family: @font-swatch5-font-family;
-  color: lighten(@color-swatch5,10%);
-  line-height:@font-swatch5-line-height;
-  font-weight: 200;
-}
-
-.widget.profile ul.twitter {
-  padding: 0;
-  margin: 0;
-}
 
 
 /* ===============================
@@ -309,19 +311,9 @@ footer p, footer .widget.profile span {
   letter-spacing: @font-swatch6-letter-spacing;
 }
 
-.widget.extendednavigation ul li a:hover {
-  color: @color-swatch3;
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
+  color: @font-swatch6-color-hover;
   text-decoration: none;
-}
-
-/* SELECTED */
-
-.widget.extendednavigation ul li.selected {
- 
-}
-
-.widget.extendednavigation ul li.selected:hover { 
-
 }
 
 /* FOLDER */
@@ -334,10 +326,6 @@ footer p, footer .widget.profile span {
   cursor: pointer;
 }
 
-.widget.extendednavigation ul li.folder .text:hover {
-  color: @color-swatch3;
-}
-
 /* DROPDOWN MENU */
 
 .widget.extendednavigation li > ul {
@@ -346,7 +334,7 @@ footer p, footer .widget.profile span {
 
 .widget.extendednavigation li:hover > ul {
   display: block;
-  width: 99.7%;
+  width: 100%;
   position: absolute;
   left: 0;
   background-color: @color-swatch7;
@@ -369,13 +357,6 @@ footer p, footer .widget.profile span {
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-.widget.extendednavigation li:hover > ul li:first-child {
-}
-
-.widget.extendednavigation li:hover > ul li:hover {
-
-}
-
 .widget.extendednavigation li:hover > ul > li > a {
   display: block;
   background-image: none;
@@ -391,13 +372,143 @@ footer p, footer .widget.profile span {
   background-repeat: no-repeat;
 }
 
-.widget.extendednavigation li:hover > ul > li > a {
 
+/* EXTENDED NAVIGATION - INSIDE ZONE */
+
+.main .widget.extendednavigation {
+    max-width: 100%;
+    width: 100%;
+    float: none;
 }
 
-.widget.extendednavigation li:hover > ul li .text:hover {
-  color: @color-swatch3;
+.main .widget.extendednavigation:before,
+.main .widget.extendednavigation:after {
+  content: " ";
+  display: table;
 }
+.main .widget.extendednavigation:after {
+  clear: both;
+}
+.main .widget.extendednavigation {
+  *zoom: 1;
+}
+
+
+/* ===============================
+   EXTENDED NAVIGATION - MAIN ZONE
+   =============================== */
+
+.main .widget.extendednavigation {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+}
+
+.main .widget.extendednavigation:before,
+.main .widget.extendednavigation:after {
+  content: " ";
+  display: table;
+}
+.main .widget.extendednavigation:after {
+  clear: both;
+}
+.main .widget.extendednavigation {
+  *zoom: 1;
+}
+
+.main .widget.extendednavigation a.pull {
+  display: none;
+}
+
+.main .widget.extendednavigation ul {
+  float: left;
+  margin: 1px 0 0;
+  padding: 0;
+}
+
+.main .widget.extendednavigation ul li {
+  float: left;
+  display: block;
+  text-align: left!important;
+}
+
+.main .widget.extendednavigation ul li a, .main .widget.extendednavigation ul li.folder .text {
+  display: block;
+  padding: 32px 30px;
+  font-family:@font-swatch6-font-family;
+  font-size:@font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+  color: @font-swatch4-color;
+  line-height:@font-swatch6-line-height;
+  letter-spacing: @font-swatch6-letter-spacing;
+}
+
+.main .widget.extendednavigation ul li a:hover, .main .widget.extendednavigation ul li.folder .text:hover {
+  color: lighten(@font-swatch4-color,10%);
+  text-decoration: none;
+}
+
+/* FOLDER */
+
+.main .widget.extendednavigation ul li.folder {
+  margin-right: 16px;
+  background-image: image('/images/arrow-down.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.main .widget.extendednavigation ul li.folder:hover {
+    background-color: darken(@color-swatch1,10%);
+}
+
+.main .widget.extendednavigation ul li.folder .text:hover {
+  color: darken(@color-swatch4,10%);
+}
+
+/* DROPDOWN MENU */
+
+.main .widget.extendednavigation li > ul {
+  display: none;
+}
+
+.main .widget.extendednavigation li:hover > ul {
+  display: block;
+  width: 100%;
+  position: absolute;
+  background-color: darken(@color-swatch1,10%);
+  border-top: 0;
+  z-index: 500;
+  padding: 14px 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+}
+
+.main .widget.extendednavigation li:hover > ul > li {
+  display: block;
+  width: 100%;
+  text-align: left!important;
+  padding: 0 30px 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.main .widget.extendednavigation li:hover > ul > li > a {
+  display: block;
+  color: @color-swatch5;
+  padding: 0;
+}
+
+
+.main .widget.extendednavigation ul li:hover > ul li .text {
+  padding: 0 0 0 16px;
+  background-image: image('/images/arrow-left.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
 
 /* ===============================
    FEATURE
@@ -474,18 +585,18 @@ footer p, footer .widget.profile span {
           border-radius: 4px;
   box-shadow: 0px 2px 0px darken(@color-swatch3,20%);
 
-  font-family: @font-swatch2-font-family;
+  font-family: @font-swatch7-font-family;
   font-size: .9em;
   font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
+  background-color: @font-swatch7-background-color;
   color: @color-swatch1;
   text-decoration: none;
 }
 
 .widget.feature button:hover 
 {
-  background-color: darken(@color-swatch2,5%);
-  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
+  background-color: @font-swatch7-background-color-hover;
+  box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
@@ -554,13 +665,59 @@ footer p, footer .widget.profile span {
   text-align: right;
 }
 
+
 /* ===============================
-   CLICK TO CALL - DOESN'T SHOW IN DESKTOP
+   CLICK TO CALL WIDGET
    =============================== */
 
-  .widget.clicktocall {
-     display:none;
-   }
+.widget.clicktocall {
+   
+}
+
+.widget.clicktocall a {
+  
+  font-family: @font-swatch5-font-family;
+  font-weight:@font-swatch5-font-weight;
+  color: @font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+  font-size: @font-swatch5-font-size;
+  text-decoration: none;
+}
+
+.widget.clicktocall a:hover {
+  cursor: pointer;
+}
+
+
+/* CLICK TO CALL - JUSTIFY */
+
+.widget.clicktocall a.justifyleft
+{
+    text-align: left;
+}
+
+.widget.clicktocall a.justifycenter
+{
+    text-align: center;
+}
+
+.widget.clicktocall a.justifyright
+{
+    text-align: right;
+}
+
+.widget.clicktocall a.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.clicktocall a.italic {
+    font-style: italic;
+}
+
+.widget.clicktocall a.bold {
+    font-weight: bold;
+}
 
 /* ===============================
    BUTTON CSS
@@ -578,20 +735,20 @@ footer p, footer .widget.profile span {
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-  box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
+  box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch2;
+  background-color: @font-swatch7-background-color;
   color: @color-swatch1;
   text-decoration: none;
 }
 
 .widget.button button:hover 
 {
-  background-color: darken(@color-swatch2,5%);
-  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
+  background-color: @font-swatch7-background-color-hover;
+  box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
@@ -856,73 +1013,6 @@ hr.line.align-right {
 
 
 /* ===============================
-   CLICK TO CALL WIDGET
-   =============================== */
-
-.widget.clicktocall {
-    padding: 10px 0;
-}
-
-.widget.clicktocall a {
-  margin: 0;
-  background-image: image('/images/ic-desktop-call.png');
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 28px;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch4-font-weight;
-  line-height: @font-swatch4-line-height;
-  color:@font-swatch4-color;
-
-  font-family: @font-swatch2-font-family;
-  font-size:1.1em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch3;
-  color: @color-swatch1;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
-}
-
-.widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-hov.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.widget.clicktocall a.justifyleft
-{
-    text-align: left;
-}
-
-.widget.clicktocall a.justifycenter
-{
-    text-align: center;
-}
-
-.widget.clicktocall a.justifyright
-{
-    text-align: right;
-}
-
-.widget.clicktocall a.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.clicktocall a.italic {
-    font-style: italic;
-}
-
-.widget.clicktocall a.bold {
-    font-weight: bold;
-}
-
-/* ===============================
    REDIRECT WIDGET
    =============================== */
 
@@ -969,7 +1059,7 @@ hr.line.align-right {
 }
 
 .widget.twitter p {
-  font-size: 1.5em;
+  font-size: 14px;
   line-height: 1.6em;
   margin-top: 20px;
 }
@@ -983,7 +1073,7 @@ hr.line.align-right {
 
 .widget.twitter span a {
   border-bottom: 0;
-  font-size: .6em;
+  font-size: 11px;
   color: @color-swatch3;
 }
 
@@ -1058,7 +1148,7 @@ hr.line.align-right {
 
 .widget.contactform fieldset input {
     height: 50px;
-    width: 50%;
+    width: 80%;
     background-color: darken(@color-swatch1,5%);
     border: 1px solid darken(@color-swatch1,10%);
     font-family: @font-swatch5-font-family;
@@ -1173,23 +1263,23 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-    background-image: image('/images/twitter.png');
-    background-position: 14px center;
+    background-image: image('/images/socialicons-twitter.svg');
+    padding: 11px 16px 11px 35px;
+    background-size: 17px;
+    background-position: 12px center;
     background-repeat: no-repeat; 
     text-indent: 6px;
-    margin: 1em 0 0em;
-    padding: 11px 16px 11px 34px;
+    margin: 0.5em 0 0em;
     border: 0;
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
             border-radius: 4px;
     box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
-    font-size: .9em;
+    font-size: 1em;
     font-weight:@font-swatch7-font-weight;
     background-color: @color-swatch2;
     color: @color-swatch1;
     text-decoration: none;
-    background-position: 14px center;
 }
 
 .widget.tweet a:hover {
@@ -1202,18 +1292,24 @@ hr.line.align-right {
   transition: background-color 0.15s ease-in-out;
 }
 
+
 /* ===============================
    SOCIAL BAR WIDGET
    =============================== */
 
-.widget.socialicons {
-    padding: 4px 0;
+.widget.socialicons, .widget.profile .bk-profile-socialicons {
+    padding: 4px 0px;
     font-family:@font-swatch7-font-family;
 }
 
-.widget.socialicons a {
-    margin: 1em 0 0em;
-    padding: 11px 16px 11px 26px;
+.widget.profile .bk-profile-socialicons {
+    margin-bottom: 20px;
+}
+
+.widget.socialicons a, .widget.profile .bk-profile-socialicons a {
+    margin: 0 0 10px;
+    padding: 10px 16px 10px 30px;
+    background-size: 17px;
     border: 0;
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
@@ -1224,11 +1320,11 @@ hr.line.align-right {
     background-color: @color-swatch2;
     color: @color-swatch1;
     text-decoration: none;
-    background-position: 14px center;
+    background-position: 12px center;
     text-indent: 6px;
 }
 
-.widget.socialicons a:hover {
+.widget.socialicons a:hover, .widget.profile .bk-profile-socialicons a:hover {
   background-color: darken(@color-swatch2,5%);
   box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
   cursor: pointer;
@@ -1238,34 +1334,45 @@ hr.line.align-right {
   transition: background-color 0.15s ease-in-out;
 }
 
-.widget.socialicons span a {
+.widget.socialicons span a, .widget.profile .bk-profile-socialicons span a {
     display: inline-block;
     margin-right: 6px;
     background-repeat: no-repeat;
 }
 
-.widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.png');
+.widget.socialicons span a:hover, 
+.widget.profile .bk-profile-socialicons span a:hover {
+    background-color: darken(@color-swatch2,2%);
 }
 
-.widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/socialicons-linkedin.png');
+.widget.socialicons span.bk-socialicons-twitter a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/socialicons-twitter.svg')
 }
 
-.widget.socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/socialicons-facebook.png');
+.widget.socialicons span.bk-socialicons-linkedin a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/socialicons-linkedin.svg');
 }
 
-.widget.socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/socialicons-rss.png');
+.widget.socialicons span.bk-socialicons-facebook a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/socialicons-facebook.svg');
 }
 
-.widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/socialicons-googleplus.png');
+.widget.socialicons span.bk-socialicons-rss a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/socialicons-rss.svg');
 }
 
-.widget.socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/socialicons-youtube.png');
+.widget.socialicons span.bk-socialicons-googleplus a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/socialicons-googleplus.svg');
+}
+
+.widget.socialicons span.bk-socialicons-youtube a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/socialicons-youtube.svg');
 }
 
 
@@ -1275,12 +1382,120 @@ hr.line.align-right {
 
 .widget.profile span {
   display: block;
-  font-family: @font-swatch5-font-family;
   font-size: @font-swatch5-font-size;
-  line-height: @font-swatch5-line-height;
+  font-family: @font-swatch5-font-family;
+  color: @font-swatch5-color;
+  line-height: 2em;
+  padding-bottom: 2px;
+}
+
+.widget.profile a {
+  font-size: @font-swatch5-font-size;
+  font-family: @font-swatch5-font-family;
   color: @font-swatch5-color;
 }
 
+.widget.profile .bk-profile-socialicons span {
+  display: inline-block;
+  line-height: inherit;
+}
+
+.widget.profile a:hover {
+  color: @color-swatch1;
+  text-decoration: none;
+}
+
+/* FOOTER PROFILE STYLES */
+
+.widget.profile ul.twitter {
+  padding: 0px;
+  margin: 0px;
+}
+
+.widget.profile ul.twitter li {
+  list-style: none;
+}
+
+.widget.profile ul.twitter p {
+  color: @font-swatch5-color;
+}
+
+.widget.profile ul.twitter img, .widget.profile ul.twitter time,
+.widget.profile ul.twitter span {
+  display: none;
+}
+
+/* SIGNUP FORM */
+
+.widget.profile form {
+  margin: 0px 0px 20px;
+  padding: 0;
+}
+
+.widget.profile fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.profile label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.profile input {
+    height: 50px;
+    width: 60%;
+    background-color: darken(@color-swatch1,5%);
+    border: 1px solid darken(@color-swatch1,10%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    margin-top: 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.profile input:focus {
+  outline: none;
+}
+
+.widget.profile button {
+  border: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
+
+  font-family: @font-swatch2-font-family;
+  font-size: .9em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch2;
+  color: @color-swatch1;
+  text-decoration: none;
+  height: 51px;
+  position: relative;
+  top: -3px;
+  width: 14%;
+}
+
+.widget.profile button:hover {
+  background-color: darken(@color-swatch2,5%);
+  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
 
 /* ===============================
    MAP WIDGET
@@ -1306,7 +1521,13 @@ hr.line.align-right {
    =============================== */
 
 .widget.signupform {
-  padding: 0px;
+  padding: 20px 30px 30px;
+  margin: 0;
+  background-color: @color-swatch1;
+  border: 1px solid darken(@color-swatch1,10%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .widget.signupform fieldset {
@@ -1315,26 +1536,35 @@ hr.line.align-right {
   margin: 0;
 }
 
+.widget.contactform fieldset {
+    border: none;
+    padding: 0;
+}
+
 .widget.signupform label {
-    font-family:@font-swatch1-font-family;
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
     font-size:font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
     line-height:@font-swatch4-line-height;
-    color:@color-swatch4;
+    color:@color-swatch2;
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
 .widget.signupform fieldset input {
-    height: 42px;
-    background-color: lighten(@color-swatch5,46%);
-    border: 1px solid lighten(@color-swatch5,40%);
+    height: 50px;
+    width: 80%;
+    background-color: darken(@color-swatch1,5%);
+    border: 1px solid darken(@color-swatch1,10%);
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 12px;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+    margin-top: 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .widget.signupform fieldset input:focus {
@@ -1342,41 +1572,33 @@ hr.line.align-right {
 }
 
 .widget.signupform button {
-  margin: 0;
-  padding: 13px 22px;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
+  border: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
 
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  letter-spacing: 3px;
+  font-family: @font-swatch2-font-family;
   font-size: .9em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch2;
+  color: @color-swatch1;
   text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  text-transform: uppercase;
-
-  background: @color-swatch2; 
-  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+  height: 51px;
+  position: relative;
+  top: -3px;
+  width: 14%;
 }
 
 .widget.signupform button:hover {
+  background-color: darken(@color-swatch2,5%);
+  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
   cursor: pointer;
-  background-color: @color-swatch2;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
-
-.widget.signupform button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
 
 
 /* ===============================
@@ -1508,7 +1730,7 @@ hr.line.align-right {
   border: none;
   cursor: pointer;
   background-color: lighten(@color-swatch5,10%);
-    border-radius: 50%;
+  border-radius: 50%;
   width: 13px;
   height: 13px; 
   margin: 0 2px;
@@ -1524,27 +1746,6 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 768px) {
-
-  /* SLIDESHOW */
-
-  .widget.responsiveslideshow .slideshow-image-list {
-    height: 350px;
-  }
-    
-  .widget.responsiveslideshow .slideshow-widget .btn-prev, 
-  .widget.responsiveslideshow .slideshow-widget .btn-next {
-      background-color: transparent;
-    border: none;
-  }
-
-  .widget.responsiveslideshow .slideshow-widget-controls {
-    padding: 8px;
-  }
-
-  .widget.responsiveslideshow .slideshow-widget-controls .dot {
-    height: 10px;
-    width: 10px;
-   }
 
   /* NAV */
 
@@ -1634,14 +1835,18 @@ hr.line.align-right {
     height: 320px;
   }
 
-  .widget.responsiveslideshow .slideshow-image-list {
-    height:200px;
-  }
-
   /* CONTACT FORM */
 
   .widget.contactform fieldset input {
   width: 100%;
+  }
+
+  .widget.signupform fieldset input {
+      width: 72%;
+  }
+
+  .widget.signupform button {
+    width: 23%;
   }
 
   /* GALLERY */
@@ -1651,6 +1856,31 @@ hr.line.align-right {
       width: 50%;
       padding-bottom: 50%;
   }
+
+  /* SLIDESHOW */
+
+  .widget.responsiveslideshow .slideshow-image-list {
+    height: 290px;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-wrapper {
+    height: 328px;
+  }
+    
+  .widget.responsiveslideshow .slideshow-widget .btn-prev, 
+  .widget.responsiveslideshow .slideshow-widget .btn-next {
+      background-color: transparent;
+      border: none;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-controls {
+    padding: 8px;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-controls .dot {
+    height: 10px;
+    width: 10px;
+   }
 
 }
 
@@ -1663,6 +1893,10 @@ hr.line.align-right {
 
   .main {
     padding: 20px 0;
+  }
+
+  .canvas {
+    width: 100%;
   }
 
   /* COMPANY HEADER */
@@ -1721,45 +1955,79 @@ hr.line.align-right {
       padding: 20px;
   }
 
+   .widget.signupform {
+    padding: 10px 20px 20px;
+   }
+
 
   /* CLICK TO CALL */
 
-  .widget.clicktocall a {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: @color-swatch3;
-    background-position: 10px;
-    background-repeat:no-repeat;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-    padding: 10px 10px 10px 38px;
-    border: 0;
-    margin: 2.2em auto;
-    letter-spacing: 0;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
+  .widget.clicktocall {
+    padding: 11px 0px;
+  }
 
-    font-family: @font-swatch2-font-family;
-    font-size:1em;
+  .widget.clicktocall a {
+    background-image: image('/images/ic-call.svg');
+    background-color: @font-swatch7-background-color;
+    background-position: 26px center;
+    background-size: 7px;
+    background-repeat:no-repeat;
+    margin: 0.5em 0em;
+    padding: 11px 25px 11px 43px;
+    border: 0;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
     font-weight:@font-swatch7-font-weight;
+    background-color: @font-swatch7-background-color;
     color: @color-swatch1;
     text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
   }
   
   .widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: @color-swatch2;
-    background-position: 10px;
-    color: @color-swatch1;
-    padding: 10px 10px 10px 38px;
+    background-image: image('/images/ic-call.svg');
+    background-color: @font-swatch7-background-color;
+    background-position: 26px center;
+    background-size: 7px;
+    background-repeat:no-repeat;
+    padding: 11px 25px 11px 43px;
+    color: @font-swatch7-color;
+    box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
     cursor: pointer;
-    text-decoration: none;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
   }
 
-  .widget.clicktocall {
-    padding: 20px 0;
-    display:block;
+  /* SLIDESHOW */
+
+  .widget.responsiveslideshow .slideshow-image-list {
+    height: 200px;
   }
+
+  .widget.responsiveslideshow .slideshow-widget-wrapper {
+    height: 240px;
+  }
+
+  .widget.responsiveslideshow .slideshow-widget-controls {
+    max-width: 100%;
+  }
+
+
+   .widget.responsiveslideshow .slideshow-widget .btn-prev {
+    background-image: image('/images/slideshow-arrow-left-wh.png');
+    left: 3px;
+   }
+
+   .widget.responsiveslideshow .slideshow-widget .btn-next {
+    background-image: image('/images/slideshow-arrow-right-wh.png');
+    right: 3px;
+   }
 
 }
 
