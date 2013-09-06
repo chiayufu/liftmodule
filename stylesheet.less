@@ -1931,6 +1931,91 @@ hr.line.align-right {
 
 }
 
+/* ===============================
+   SIGNUP FORM WIDGET
+   =============================== */
+
+.widget.signupform {
+  padding: 20px 30px 30px;
+  margin: 0;
+  background-color: @color-swatch1;
+  border: 1px solid darken(@color-swatch1,10%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.widget.signupform fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.contactform fieldset {
+    border: none;
+    padding: 0;
+}
+
+.widget.signupform label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch2;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+.widget.signupform fieldset input {
+    height: 50px;
+    width: 100%;
+    background-color: darken(@color-swatch1,5%);
+    border: 1px solid darken(@color-swatch1,10%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    margin-top: 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.widget.signupform fieldset input:focus {
+  outline: none;
+}
+
+.widget.signupform button {
+  border: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
+
+  font-family: @font-swatch2-font-family;
+  font-size: .9em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch2;
+  color: @color-swatch1;
+  text-decoration: none;
+  height: 51px;
+  position: relative;
+  top: -3px;
+  width: 50%;
+}
+
+.widget.signupform button:hover {
+  background-color: darken(@color-swatch2,5%);
+  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
 
 /* ===============================
    IPHONE WIDTH
