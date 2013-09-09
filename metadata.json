@@ -2,6 +2,11 @@
 	"name":"Lift Module",
 	"thumbnail":"liftmodule.png",
 	"screenshot":"liftmodule.png",
+    "tags": {
+        "en": ["Professional", "Dark", "Business", "modern"],
+        "es": ["Profesional", "Oscuro", "Corporativo", "moderno"],
+        "br": ["Profissional", "Escuro", "Corporativo", "moderno"]
+    },
     "colorSwatches":
     {
         "Swatch 1": {
