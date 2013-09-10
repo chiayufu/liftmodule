@@ -3,9 +3,9 @@
 	"thumbnail":"liftmodule.png",
 	"screenshot":"liftmodule.png",
     "tags": {
-        "en": ["Professional", "Dark", "Business", "modern"],
-        "es": ["Profesional", "Oscuro", "Corporativo", "moderno"],
-        "br": ["Profissional", "Escuro", "Corporativo", "moderno"]
+        "en": ["Professional", "Dark", "Business", "modern", "stylish", "agency", "magazine", "creative", "elegant", "professional", "sophisticated", "media", "sans-serif"],
+        "es": ["Profesional", "Oscuro", "Corporativo", "moderno", "estilo", "agencia", "revista", "creativo", "elegante", "profesional", "sofisticado", "comunicacion", "sans-serif"],
+        "br": ["Profissional", "Escuro", "Corporativo", "moderno", "estilo", "agência", "revista", "criativo", "elegante", "profissional", "sofisticado", "mídia", "sans-serif"]
     },
     "colorSwatches":
     {
