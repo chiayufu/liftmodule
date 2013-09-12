@@ -42,15 +42,24 @@
 
 			$(pull).on('click', function(e) {
 				e.preventDefault();
-				menu.slideToggle();
+				if (menu.is(':visible')) {
+					menu.hide();	
+				} else {
+					menu.show();
+				}
+
 			});
 
-			$(window).resize(function(){
+            function menuToggle() {
         		var w = $(window).width();
+
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
         		}
-    		});
+            }
+
+			$(window).bind('resize', menuToggle);
+            $(window).bind('orientationchange', menuToggle);
 		});
 	</script>
 
