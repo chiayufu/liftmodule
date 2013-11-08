@@ -1,4 +1,14 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE STYLES
+   =============================== */
 
 body {
   background-color: @color-swatch1;
@@ -747,6 +757,7 @@ footer span {
   font-family: @font-swatch7-font-family;
   font-weight:@font-swatch7-font-weight;
   line-height: @font-swatch7-line-height;
+  font-size: @font-swatch7-font-size;
   letter-spacing: @font-swatch7-letter-spacing;
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
@@ -1275,6 +1286,18 @@ hr.line.align-right {
 
 .widget.contactform fieldset button.btn.bold {
     font-weight: bold;
+}
+
+
+/* ===============================
+   DROPBOX WIDGET
+   =============================== */
+
+  .widget.dropbox .b-wrap .btn {
+   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
 
 
