@@ -6,29 +6,35 @@
     <div class="wrapper clearfix">
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "Smart Inc."})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
 </header>
 
-<div class="canvas">
-
     <div class="main wrapper clearfix">
         {{zone('main')|raw}}
     </div>
 
-</div>
+
+
 
 <footer>
     <div class="wrapper clearfix">
-        <div class="responsivecolumns columns-two-50-50">
+        <div class="responsivecolumns columns-two-25-75">
             <div class="column columns-two-left">
-                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna<br> sit amet mauris elementum quis rutrum lacus gravida.</p>"})|raw}}
+                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
             </div>
             <div class="column columns-two-right">
-                {{widget('content', 'footercolumn2content1', {"content":"<h2>Aliquam Sodales</h2>"})|raw}}
-                {{widget('profile', 'footercolumn2profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}} 
+
+                {{widget('content', 'footercolumn2content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('profile', 'footcolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+
+                {{widget('profile', 'footcolumn2profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+
             </div>
         </div>
     </div>
