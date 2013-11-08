@@ -799,7 +799,10 @@ footer span {
   font-family: @font-swatch2-font-family;
   font-size: 1.2em;
   font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch6-background-color;
+  line-height: @font-swatch7-line-height;
+  font-size: @font-swatch7-font-size;
+  letter-spacing: @font-swatch7-letter-spacing;
+  background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
       -webkit-border-radius: 50px;
@@ -1349,7 +1352,30 @@ hr.line.align-right {
 }
 
 /* ===============================
-   CONTACT FORM WIDGET
+   DROPBOX WIDGET
+   =============================== */
+
+  .widget.dropbox .b-wrap .btn {
+   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+}
+
+/* ===============================
+   PAYPAL WIDGET
+   =============================== */
+
+  .widget.paypalbuynow .widget.button.paypal  {
+   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+}
+
+
+/* ===============================
+    CONTACT FORM WIDGET
    =============================== */
 
 .widget.contactform form {
