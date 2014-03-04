@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<header>
+<header class="bk-header">
     <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
+        <div class="infoheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
@@ -13,21 +13,19 @@
 </header>
 
 <div class="canvas">
-
     <div class="main wrapper clearfix">
-         <section>
-            {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum;","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
+        <section>
+            {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
         </section>
         {{zone('main')|raw}}
     </div>
-
 </div>
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-50-50">
             <div class="column columns-two-left">
-                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida.</p>"})|raw}}
+                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis.</p>"})|raw}}
             </div>
             <div class="column columns-two-right">
                 {{widget('content', 'footercolumn2content1', {"content":"<h2>Alam Ipsum</h2>"})|raw}}
