@@ -54,15 +54,8 @@ header.bk-header {
 }
 
 .infoheader {
-    display: block;
+    float: left;
     padding: 22px 0;
-    z-index:2;
-}
-
-@media @tablet {
-    .infoheader {
-        float:left;
-    }
 }
 
 /* COMPANY NAME */
@@ -103,9 +96,16 @@ footer.bk-footer {
 // EXTENDED NAVIGATION
 // ===============================
 
+.widget .extendednavigation {
+    float: right;
+    max-width: 650px;
+    @media (max-width: 915px) {
+        max-width: 100%;
+    }
+}
+
 .widget {
     &.extendednavigation {
-        z-index:1;
         .clearfix;
         ul {
             margin: 20px 0;
@@ -113,6 +113,12 @@ footer.bk-footer {
                 margin: 0;
                 padding: 20px 0;
                 border-top: 1px solid lighten(@color-swatch7,8%);
+            }
+            &.align-right {
+                li.folder {
+                    background-image: image('/images/arrow-down.png');
+                    background-position: 7px center;
+                }
             }
             li {
                 // Folder 
@@ -127,13 +133,13 @@ footer.bk-footer {
                     }
                     @media @tablet {
                         background-image: image('/images/arrow-left.png'), image('/images/arrow-down.png');
-                        background-position: 20px center, right center;
+                        background-position: 10px center, right center;
                         background-repeat: no-repeat;
                     }
                 }
                 @media @tablet {
                     background-image: image('/images/arrow-left.png');
-                    background-position: 20px center;
+                    background-position: 10px center;
                     background-repeat: no-repeat;
                     padding: 0;
                     border-bottom: 0;
@@ -142,18 +148,20 @@ footer.bk-footer {
                 &:hover {
                     ul {
                         background-color: @color-swatch7;
-                        padding: 30px 0 20px;
+                        padding: 0;
                         margin: -1px 0 0;
                         -webkit-border-radius: 0px 0px 4px 4px;
                         -moz-border-radius: 0px 0px 4px 4px;
                         border-radius: 0px 0px 4px 4px;
+                        @media @tablet {
+                            background-color: lighten(@color-swatch7,5%);
+                        }
                         li {
                             display: block;
                             width: 100%;
-                            text-align: left!important;
-                            padding: 0 33px 0;
+                            padding: 6px 26px;
                             @media @tablet {
-                                padding: 10px 40px;
+                                padding: 6px 20px;
                             }
                             a {
                                 padding: 0;
@@ -183,10 +191,7 @@ footer.bk-footer {
 }
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-    padding: 12px 30px;
-    @media @tablet {
-        padding: 12px 50px;
-    }
+    padding: 6px 26px;
 }
 
 
@@ -1060,13 +1065,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 
   footer.bk-footer {
     padding: 3em 0;
-  }
-
-  /* UL ALIGN RIGHT */
-
-  .widget.extendednavigation ul.align-right li.folder {
-    background-position: 12px center;
-    padding-right: 0;
   }
 
   /* CLICK TO CALL */
