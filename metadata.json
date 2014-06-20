@@ -2,6 +2,7 @@
 	"name":"Lift Module",
 	"thumbnail":"liftmodule.png",
 	"screenshot":"liftmodule.png",
+	"templateType":"standard",
     "tags": {
         "en": ["Professional", "Dark", "Business", "modern", "stylish", "agency", "magazine", "creative", "elegant", "professional", "sophisticated", "media", "sans-serif"],
         "es": ["Profesional", "Oscuro", "Corporativo", "moderno", "estilo", "agencia", "revista", "creativo", "elegante", "profesional", "sofisticado", "comunicacion", "sans-serif"],
@@ -101,7 +102,7 @@
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "34px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch3",
             "letter-spacing": "inherit",
