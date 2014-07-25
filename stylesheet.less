@@ -67,6 +67,13 @@ header.bk-header {
     width: 250px;
 }
 
+.widget {
+    &.logo, &.companyname {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
 /* LOGO */
 
 .widget.logo {
@@ -190,6 +197,12 @@ footer.bk-footer {
                 box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
             }
         }
+    }
+}
+
+.extendednavigation li.selected {
+    a, .text {
+        color: lighten(@font-swatch5-color,20%);
     }
 }
 
