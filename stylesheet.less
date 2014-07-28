@@ -48,29 +48,38 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-.bk-header {
-  padding: 0;
+header.bk-header {
+    padding: 0;
+    background-color: @color-swatch7;
 }
 
-.companyheader {
-  display: block;
-  float: left;
-  padding: 20px 0px 18px;
-  width: 30%
+.infoheader {
+    float: left;
+    padding: 22px 0;
 }
 
 /* COMPANY NAME */
 
-// Logo & Company Name
-.widget.logo, .widget.companyname {
-    display: inline-block;
-    vertical-align: middle;
+.widget.companyname {
+    display: block;
+    float: left;
+    margin-top: 8px;
+    width: 250px;
+}
+
+.widget {
+    &.logo, &.companyname {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 /* LOGO */
 
 .widget.logo {
-  margin-right: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
 }
 
 /* ===============================
