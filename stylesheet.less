@@ -53,8 +53,7 @@ header.bk-header {
     background-color: @color-swatch7;
 }
 
-.companyheader {
-    display: block;
+.infoheader {
     float: left;
     width: 30%;
     @media @tablet {
@@ -63,14 +62,14 @@ header.bk-header {
 }
 
 // Logo & Company Name
-.widget.logo, .widget.companyname {
+.widget.logo, .widget.infoheader {
     display: inline-block;
     vertical-align: middle;
 }
 
 /* COMPANY NAME */
 
-.widget.companyname {
+.widget.infoheader {
     a {
         font-family: @font-swatch10-font-family;
         font-weight: @font-swatch10-font-weight;
@@ -81,7 +80,7 @@ header.bk-header {
     }
 }
 
-.widget.companyname a:hover {
+.widget.infoheader a:hover {
     cursor: pointer;
     text-decoration: none;
 }
@@ -119,8 +118,8 @@ footer.bk-footer {
    =============================== */
 
 .widget.extendednavigation {
-    float: right;
-    max-width: 600px;
+    float: left;
+    max-width: 70%;
     @media (max-width: 915px) {
         max-width: 100%;
     }
