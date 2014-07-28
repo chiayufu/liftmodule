@@ -49,36 +49,50 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 header.bk-header {
-    padding: 0;
+    padding: 20px 0;
     background-color: @color-swatch7;
 }
 
-.infoheader {
+.companyheader {
+    display: block;
     float: left;
-    padding: 22px 0;
+    width: 30%;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+// Logo & Company Name
+.widget.logo, .widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* COMPANY NAME */
 
 .widget.companyname {
-    display: block;
-    float: left;
-    margin-top: 8px;
-    width: 250px;
+    a {
+        font-family: @font-swatch10-font-family;
+        font-weight: @font-swatch10-font-weight;
+        color: @font-swatch10-color;
+        line-height: @font-swatch10-line-height;
+        letter-spacing: @font-swatch10-letter-spacing;
+        font-size: @font-swatch10-font-size;
+    }
 }
 
-.widget {
-    &.logo, &.companyname {
-        display: inline-block;
-        vertical-align: middle;
-    }
+.widget.companyname a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headerprofile {
+  background-color:@color-swatch1;
 }
 
 /* LOGO */
 
 .widget.logo {
-    display: block;
-    float: left;
     margin-right: 10px;
 }
 
