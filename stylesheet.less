@@ -49,29 +49,59 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 header.bk-header {
-    padding: 0;
+    padding: 20px 0;
     background-color: @color-swatch7;
 }
 
 .infoheader {
     float: left;
-    padding: 22px 0;
+    width: 30%;
+    padding-top: 40px;
+    @media @tablet {
+        width: 99%;
+        padding-top: 20px;
+    }
+}
+
+// Logo & Company Name
+.widget.logo, .widget.infoheader {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* COMPANY NAME */
 
-.widget.companyname {
-    display: block;
-    float: left;
-    margin-top: 8px;
+.widget.infoheader {
+    a {
+        font-family: @font-swatch10-font-family;
+        font-weight: @font-swatch10-font-weight;
+        color: @font-swatch10-color;
+        line-height: @font-swatch10-line-height;
+        letter-spacing: @font-swatch10-letter-spacing;
+        font-size: @font-swatch10-font-size;
+    }
+}
+
+.widget.infoheader a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headerprofile {
+  background-color:@color-swatch1;
 }
 
 /* LOGO */
 
 .widget.logo {
-    display: block;
-    float: left;
     margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* ===============================
@@ -92,15 +122,16 @@ footer.bk-footer {
 }
 
 
-// ===============================
+/* ===============================
 // EXTENDED NAVIGATION
-// ===============================
+   =============================== */
 
-.widget .extendednavigation {
-    float: right;
-    max-width: 700px;
+.widget.extendednavigation {
+    float: left;
+    max-width: 70%;
     @media (max-width: 915px) {
         max-width: 100%;
+        floath: none;
     }
 }
 
@@ -192,8 +223,19 @@ footer.bk-footer {
     }
 }
 
+.extendednavigation li.selected {
+    a, .text {
+        color: lighten(@font-swatch5-color,20%);
+    }
+}
+
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
     padding: 6px 26px;
+}
+
+
+.widget.extendednavigation ul {
+    padding: 5px 10px;
 }
 
 
@@ -370,6 +412,11 @@ hr.line.align-right {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+
+.twitter div.twitter-profile-pic a,
+div.twitter-profile-pic {
+  line-height: 0;
 }
 
 .widget.twitter p {
@@ -824,6 +871,92 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 
 
 /* ===============================
+   eCOM
+   =============================== */
+
+
+.widget.ecomproductslist {
+  .ecom-productslist-products {
+    // Filter
+    .productlist-filter {
+      .productlist-display-form {
+        .clearfix;
+        margin-bottom: 1em;
+        text-align: center;
+        .form-group {
+          margin-right: 0.5em;
+          margin-left: 0.5em;
+          display: inline-block;
+          vertical-align: center;
+          @media @mobile {
+            display: block;
+            margin-bottom: 10px;
+          }
+          label {
+            display: block;
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+            text-align: center;
+            @media @mobile {
+              text-align: left;
+            }
+          }
+          select {
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            -webkit-appearance: none;
+            text-overflow: '';
+            cursor: pointer;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: right center;
+            margin: 0;
+            color: @color-swatch5;
+            position: relative;
+            display: inline-block;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            line-height: 1;
+            border-radius: 0;
+            webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid darken(@color-swatch2, 10%);
+            background-color: @color-swatch1;
+            padding: 8px 38px 8px 14px;
+            text-indent: 0;
+            letter-spacing: 0;
+            float: none;
+            height: 41px;
+           background-image: image('/images/ui-select-arrow.png');
+
+            @media @mobile {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .productlist-item-count {
+        text-align: center;
+        clear: both;
+      }
+    }
+  }
+}
+
+.svg {
+  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
+    background-image: image('/images/ui-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: 93%;
+    background-position-y: 55%;
+  }
+}
+
+
+/* ===============================
    BLOG
    =============================== */
 
@@ -1050,6 +1183,10 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
    =============================== */
 
 @media only screen and (max-width: 480px) {
+
+  .widget.companyname {
+    width:200px;
+  }
 
   .main {
     padding: 20px 0;
