@@ -1,4 +1,5 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/layout-header.less";
 
 /* ===============================
    TEMPLATE STYLES
@@ -44,6 +45,34 @@ body {
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
   overflow: visible;
+}
+
+// ------------------------------------------
+// #Default page sticky footer
+// ------------------------------------------
+
+.bk-default {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+    min-height: 100vh;
+    flex-direction: column;
+     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    @media @tablet {
+        display: initial;
+    }
+}
+
+.bk-default .page-wrap {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 
