@@ -730,6 +730,10 @@ div.twitter-profile-pic {
   padding-bottom: 2px;
 }
 
+.bk-profile-address p, .widget.profile ul.twitter p {
+    color: @font-swatch6-color;
+}
+
 footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     background-color: @color-swatch2;
     box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
@@ -738,12 +742,11 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 .widget.profile a {
   font-size: @font-swatch5-font-size;
   font-family: @font-swatch5-font-family;
-  color: @font-swatch5-color;
+  color: @font-swatch6-color;
 }
 
 .widget.profile a:hover {
-  color: @color-swatch1;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* FOOTER PROFILE STYLES */
@@ -755,10 +758,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 
 .widget.profile ul.twitter li {
   list-style: none;
-}
-
-.widget.profile ul.twitter p {
-  color: @font-swatch5-color;
 }
 
 .widget.profile ul.twitter img, .widget.profile ul.twitter time,
