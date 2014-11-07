@@ -9,6 +9,9 @@
         "es": ["Profesional", "Oscuro", "Corporativo", "moderno", "estilo", "agencia", "revista", "creativo", "elegante", "profesional", "sofisticado", "comunicacion", "sans-serif"],
         "br": ["Profissional", "Escuro", "Corporativo", "moderno", "estilo", "agência", "revista", "criativo", "elegante", "profissional", "sofisticado", "mídia", "sans-serif"]
     },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
