@@ -953,12 +953,11 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     .productlist-search {
         margin-bottom: 20px;
         input {
-            height: 35px;
-            margin-top: -2px;
             border: 1px solid darken(@color-swatch1,10%);
             background-color: @color-swatch1;
             border-radius: 3px;
             vertical-align:top;
+            height: 34px;
             @media @tablet {
                 width: 100%;
                 max-width: 100%;
@@ -967,14 +966,16 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         }
         .btn {
             position: relative;
-            top: -2px;
-            height: 32px;
             margin-left: 2px;
             padding: 0 10px;
             border-radius: 3px;
             vertical-align:top;
         }
     }
+}
+
+.productlist-filter select, .delivery select, .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
+    vertical-align: top;
 }
 
 // Item Count
