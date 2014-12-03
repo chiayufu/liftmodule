@@ -425,9 +425,8 @@ button.btn,
 .blog-list-footer.bk-footer a,
 .blogsearch form button,
 .productlist-search button,
-.widget.signupform fieldset button.btn,
-.menu-section-item-dietary-props .dietary-icon {
-    padding: 11px 26px;
+.widget.signupform fieldset button.btn {
+    padding: 9px 26px;
     border: 0;
     background-color: @font-swatch7-background-color;
     border-radius: 4px;
@@ -441,7 +440,16 @@ button.btn,
         -moz-transition: background-color 0.15s ease-in-out;
         -o-transition: background-color 0.15s ease-in-out;
         transition: background-color 0.15s ease-in-out;
+        text-decoration: none;
     }
+}
+
+.menu-section-item-dietary-props .dietary-icon {
+    padding: 11px 26px;
+    border: 0;
+    background-color: @font-swatch7-background-color;
+    border-radius: 4px;
+    color: @font-swatch7-color;
 }
 
 // PayPal, Dropbox, Tweet
@@ -462,6 +470,14 @@ button.btn,
 
 .widget.signupform {
     input.email { margin-right: 10px; }
+}
+
+.widget.signupform form input {
+    text-indent:5px;
+}
+
+.signupform fieldset label {
+    margin-bottom:0;
 }
 
 /* ===============================
@@ -653,46 +669,6 @@ div.twitter-profile-pic {
     -moz-border-radius: 4px;
     border-radius: 4px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
-}
-
-
-/* ===============================
-   TWEET THIS WIDGET
-   =============================== */
-
-.widget.tweet {
-   padding: 7px 0; 
-}
-
-.svg .widget.tweet a {
-    background-image: image('/images/social/socialicons-twitter.svg');
-    padding: 11px 16px 11px 35px;
-    background-size: 17px;
-    background-position: 12px center;
-    background-repeat: no-repeat; 
-    text-indent: 6px;
-    margin: 0.5em 0 0em;
-    border: 0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-    box-shadow: 0px 2px 0px darken(@color-swatch2,10%);
-    background-color: @color-swatch2;
-    text-decoration: none;
-}
-
-.widget.tweet a {
-    background-image: image('/images/social/socialicons-twitter.png');
-}
-
-.widget.tweet a:hover {
-  background-color: darken(@color-swatch2,5%);
-  box-shadow: 0px 2px 0px darken(@color-swatch2,15%);
-  cursor: pointer;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
 }
 
 
@@ -985,11 +961,15 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     .productlist-search {
         margin-bottom: 20px;
         input {
-            height: 35px;
-            margin-top: 2px;
             border: 1px solid darken(@color-swatch1,10%);
             background-color: @color-swatch1;
             border-radius: 3px;
+            vertical-align:top;
+            height: 36px;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -webkit-appearance:none;
             @media @tablet {
                 width: 100%;
                 max-width: 100%;
@@ -998,13 +978,18 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         }
         .btn {
             position: relative;
-            top: 1px;
-            height: 35px;
             margin-left: 2px;
-            padding: 0 10px;
             border-radius: 3px;
+            vertical-align:top;
+            line-height:inherit;
+            padding:3px 20px;
+            height: 33px;
         }
     }
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+     vertical-align: top;
 }
 
 // Item Count
@@ -1258,9 +1243,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         &:disabled {
             opacity: 0.3;
         }
-        &:hover {
-            background-color: @color-swatch2;
-        }
     }
     // 
     .js-shipping-opts {
@@ -1295,6 +1277,17 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 
 .blog-search-input {
     margin-right: 20px;
+}
+
+.blog-post-title {
+    margin-top:10px;
+}
+
+.blog-search-form input {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -webkit-appearance:none;
 }
 
 .blog-post-item {
@@ -1333,6 +1326,10 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     float: left;
     width: 100%;
     margin: 10px 0;
+}
+
+.blog-post-more-link a:hover {
+    text-decoration: none;
 }
 
 .blog-post-sharing .btn {
@@ -1396,6 +1393,8 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
                     -moz-transition: background-color 0.15s ease-in-out;
                     -o-transition: background-color 0.15s ease-in-out;
                     transition: background-color 0.15s ease-in-out;
+                    background-color:@font-swatch7-background-color-hover;
+                    box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
                 }
             }
         }
@@ -1503,6 +1502,10 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         border-radius: 4px;
         margin: 0 0 30px;
     }
+}
+
+.widget.blogsearch form button, .widget.profile form button, .widget.signupform form button {
+    margin-top:10px;
 }
 
 
