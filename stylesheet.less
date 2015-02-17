@@ -14,6 +14,10 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 5%;
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -424,6 +428,7 @@ button.btn,
 .blog-list-footer.bk-footer a,
 .blogsearch form button,
 .productlist-search button,
+.widget.ecombasket .ecombasket-pull,
 .widget.signupform fieldset button.btn {
     padding: 9px 26px;
     border: 0;
@@ -445,21 +450,7 @@ button.btn,
 
 // Ecommerce
 .widget.ecombasket .ecombasket-pull {
-    border: 0;
-    background-color: @font-swatch7-background-color;
-    border-radius: 4px;
-    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
-    color: @font-swatch7-color;
-    &:hover {
-        background-color: @font-swatch7-background-color-hover;
-        box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
-        cursor: pointer;
-        -webkit-transition: background-color 0.15s ease-in-out;
-        -moz-transition: background-color 0.15s ease-in-out;
-        -o-transition: background-color 0.15s ease-in-out;
-        transition: background-color 0.15s ease-in-out;
-        text-decoration: none;
-    }
+    padding: 9px 20px;
 }
 
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
