@@ -419,7 +419,6 @@ button.btn,
 .widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
 .blog-post-more-link a,
-.widget.ecombasket .ecombasket-pull,
 .ecombasket-checkout-link,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer.bk-footer a,
@@ -442,6 +441,30 @@ button.btn,
         transition: background-color 0.15s ease-in-out;
         text-decoration: none;
     }
+}
+
+// Ecommerce
+.widget.ecombasket .ecombasket-pull {
+    border: 0;
+    background-color: @font-swatch7-background-color;
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+    color: @font-swatch7-color;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+        box-shadow: 0px 2px 0px darken(@font-swatch7-background-color-hover,15%);
+        cursor: pointer;
+        -webkit-transition: background-color 0.15s ease-in-out;
+        -moz-transition: background-color 0.15s ease-in-out;
+        -o-transition: background-color 0.15s ease-in-out;
+        transition: background-color 0.15s ease-in-out;
+        text-decoration: none;
+    }
+}
+
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+    border: 0;
+    background-color: transparent;
 }
 
 .menu-section-item-dietary-props .dietary-icon {
@@ -1508,6 +1531,15 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     margin-top:10px;
 }
 
+.menu-subsection-promoted {
+    background-color: @color-swatch1;
+    padding: 30px;
+    margin: 0 0 30px;
+    border: 1px solid darken(@color-swatch1,10%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
 
 /* ===============================
    IPHONE WIDTH
