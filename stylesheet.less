@@ -60,7 +60,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;    
+    display: flex;
     min-height: 100vh;
     flex-direction: column;
      -webkit-flex-direction: column;
@@ -94,6 +94,8 @@ header.bk-header {
     width: 30%;
     @media @tablet {
         width: 90%;
+        z-index: 1;
+        position: relative;
     }
 }
 
@@ -166,7 +168,7 @@ footer.bk-footer {
             }
         }
         li {
-            // Folder 
+            // Folder
             &.folder {
                 margin-right: 0;
                 padding-right:10px;
@@ -192,7 +194,7 @@ footer.bk-footer {
             }
             // Dropdown Menu
             &:hover {
-                ul {    
+                ul {
                     min-width: 140px;
                     max-width: 220px;
                     background-color: darken(@color-swatch7,3%);
@@ -279,12 +281,12 @@ footer.bk-footer {
                     max-width: 400px;
                     padding: 40px;
                     margin: 0 auto;
-                    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.7); 
+                    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.7);
                     -webkit-border-radius: 3px;
                     -moz-border-radius: 3px;
                     border-radius: 3px;
                 }
-                h2 { 
+                h2 {
                     display: inline-block;
                     line-height: 24px;
                     border-bottom: 2px solid rgba(255,255,255,0.3);
@@ -301,7 +303,7 @@ footer.bk-footer {
                         margin: 0;
                     }
                 }
-                button { 
+                button {
                     padding: 0 12px;
                     box-shadow: 0px 2px 0px darken(@color-swatch3,15%);
                     -webkit-border-radius: 3px;
@@ -320,7 +322,7 @@ footer.bk-footer {
                         -o-transition: background-color 0.15s ease-in-out;
                         transition: background-color 0.15s ease-in-out;
                     }
-                } 
+                }
             }
         }
         .feature-btn {
@@ -335,7 +337,7 @@ footer.bk-footer {
    =============================== */
 
 .widget.clicktocall a {
-  
+
   font-family: @font-swatch5-font-family;
   font-weight:@font-swatch5-font-weight;
   color: @font-swatch5-color;
@@ -413,12 +415,12 @@ footer.bk-footer {
 
 // General
 .widget.button button,
-button.btn, 
-.widget.profile form button, 
-.contactform button.btn, 
+button.btn,
+.widget.profile form button,
+.contactform button.btn,
 .btn,
-.widget.dropbox button, 
-.checkout-order-button, 
+.widget.dropbox button,
+.checkout-order-button,
 .checkout-empty-link,
 .widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
@@ -802,7 +804,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         padding: 10px 10px 5px;
     }
     .slideshow-widget {
-        // Arrows 
+        // Arrows
         .btn-prev,
         .btn-next {
             background-color: darken(@color-swatch1,5%);
@@ -837,7 +839,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         .btn-next {
             background-image: image('/images/slideshow-arrow-right.png');
             background-repeat: no-repeat;
-            background-position: center;    
+            background-position: center;
             border-right: none;
             right: 0;
             -webkit-border-top-left-radius: 7px;
@@ -847,7 +849,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
             border-top-left-radius: 7px;
             border-bottom-left-radius: 7px;
         }
-        // Play Button 
+        // Play Button
         .btn-play {
             background: rgba(0,0,0,0.5);
             top: 41%;
@@ -880,7 +882,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
             }
         }
     }
-    // Slideshow Controls 
+    // Slideshow Controls
     .slideshow-widget-controls {
         text-align: center;
         margin-top: 0;
@@ -1096,7 +1098,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
                 max-width: 100%!important;
             }
         }
-        @media (max-width: 360px) { 
+        @media (max-width: 360px) {
             max-width: 100%;
         }
     }
@@ -1159,7 +1161,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
                 outline: none;
             }
         }
-    }   
+    }
     .basket-summary-subtotal {
         background-color: @color-swatch1;
     }
@@ -1258,7 +1260,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
             opacity: 0.3;
         }
     }
-    // 
+    //
     .js-shipping-opts {
         border-bottom: 1px solid darken(@color-swatch1,10%);
         padding-bottom: 20px;
@@ -1591,7 +1593,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     color: @color-swatch1;
     text-decoration: none;
   }
-  
+
   .widget.clicktocall a:hover {
     background-image: image('/images/ic-call.svg');
     background-color: @font-swatch7-background-color;
