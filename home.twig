@@ -4,13 +4,9 @@
 
 <header class="bk-header">
     <div class="wrapper clearfix">
-        <div class="flex-container">
-            <div class="infoheader clearfix">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            </div>
-            {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-        </div>
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
     </div>
 </header>
 
@@ -31,8 +27,8 @@
             </div>
             <div class="column columns-two-right">
                 {{widget('content', 'footercolumn2content1', {"content":"<h2>Alam Ipsum</h2>"})|raw}}
-                {{widget('profile', 'footercolumn2profilesocialicons', { 'profileType' : 'socialicons' })|raw}} 
-                {{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}} 
+                {{widget('profile', 'footercolumn2profilesocialicons', { 'profileType' : 'socialicons' })|raw}}
+                {{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
             </div>
         </div>
     </div>
