@@ -186,6 +186,7 @@ footer.bk-footer {
     @media @tablet {
         width: 100%;
         float: none;
+        margin-right: -46px;
     }
     ul {
         @media @tablet {
@@ -266,8 +267,8 @@ footer.bk-footer {
         }
     }
     a.pull {
-        top: -43px;
-        right: 32px;
+        top: 0;
+        right: 0;
 
         &:after {
             top: 12px;
@@ -275,6 +276,12 @@ footer.bk-footer {
             background-color: @color-swatch1;
             box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
         }
+    }
+}
+
+.widget.extendednavigation .bk-overlay {
+    @media @tablet {
+        top: -40px!important;
     }
 }
 
