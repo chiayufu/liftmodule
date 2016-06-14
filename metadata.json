@@ -1,7 +1,7 @@
 {
 	"name":"Lift Module",
 	"thumbnail":"liftmodule.png",
-	"screenshot":"liftmodule.png",
+	"screenshot":"liftmodule-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
