@@ -267,7 +267,6 @@ footer.bk-footer {
         }
     }
     a.pull {
-        top: -43px;
         right: 0;
 
         &:after {
@@ -295,6 +294,19 @@ footer.bk-footer {
         text-decoration: underline;
     }
 }
+
+// If logo and companyname is hidden
+.logo.bk-tpl-hidden + .companyname.bk-tpl-hidden + .extendednavigation a.pull,
+.widget.extendednavigation a.pull {
+   top: -19px;
+}
+
+.logo + .companyname + .extendednavigation a.pull,
+.logo + .extendednavigation a.pull,
+.companyname + .extendednavigation a.pull {
+   top: -43px;
+}
+
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
     padding: 6px 20px;
