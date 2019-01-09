@@ -1,0 +1,98 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+// Editor Overrides
+// -----------------------------
+
+.row-overlay:before {
+    background: transparent !important;
+    background-image: linear-gradient(to right, #ff000000 , #eaeaea) !important;
+}
+.row-overlay:after {
+    background: transparent !important;
+    background-image: linear-gradient(to left, #ff000000 , #eaeaea) !important;
+}
+.row-overlay__edit-button,
+.row-overlay__delete-button,
+.row-overlay__arrangement-button-group {
+    box-shadow: 0 2px 6px 0 rgba(51,51,51,0.3) !important;
+}
+
+
+
+
+// Site Layout and Spacing
+// -----------------------------
+
+@canvas-container: 1080px;
+@site-container: 960px;
+@site-margin: auto;
+@site-padding: 50px;
+
+#page-zones__main > .widget:not(.row),
+.canvas,
+.bk-header .wrapper,
+.bk-footer .wrapper {
+    margin-left: @site-margin;
+    margin-right: @site-margin;
+    max-width: @canvas-container;
+}
+.bk-header .wrapper,
+.bk-footer .wrapper {
+    width: 90%;
+}
+
+#page-zones__main > .widget:not(.row) {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+#page-zones__main > .widget:not(.row):first-child,
+#page-zones__main > .row + .widget:not(.row),
+#page-zones__main + .row,
+#page-zones__main > .row:first-child:not(.style--light) {
+    margin-top: 50px;
+    
+    @media @tablet {
+        margin-top: 5%;
+    }
+}
+
+// Default page
+.canvas__default-page #page-zones__main > .row:first-child {
+    margin-top: 0;
+}
+
+
+
+
+// Widgets
+// -----------------------------
+
+
+// Feature
+.widget.feature {
+    margin: 0;
+    padding-top: @site-padding;
+    padding-left: @site-padding;
+    padding-right: @site-padding;
+    
+    @media @tablet {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+// Gallery, Image
+.row {
+    .widget.gallery {
+        margin: 0;
+    }
+    figure {
+        margin: 0;
+    }
+}
+

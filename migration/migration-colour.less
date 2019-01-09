@@ -1,0 +1,200 @@
+// -----------------------------
+// Migration Colours
+// -----------------------------
+
+
+// Dark
+// -----------------------------
+
+.style--dark {
+    
+    // Button
+    .widget.button button,
+    button.btn,
+    .widget.profile form button,
+    .btn,
+    .widget.dropbox button,
+    .checkout-order-button,
+    .checkout-empty-link,
+    .widget.tweet a,
+    .widget.paypalbuynow .widget.button.paypal,
+    .blog-post-more-link a,
+    .ecombasket-checkout-link,
+    .widget.ecomcheckout .checkout-order-button,
+    .blog-list-footer.bk-footer a,
+    .blogsearch form button,
+    .productlist-search button,
+    .widget.ecombasket .ecombasket-pull,
+    .widget.signupform fieldset button.btn {
+        background-color: @color--accent;
+        color: contrast(@color--accent, @color--light, @color--dark, 43%);
+    }
+
+    // Typgoraphy - Headings
+    a,
+    .content,
+    .contentgroup {
+        h1, h2, h3, h4, h5 {
+            color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        }
+    }
+
+    // Typography - Body
+    .content,
+    .contentgroup {
+        p, a, blockquote, h6, ul, ol, li {
+            color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+        }
+    }
+    .productlist-pagination-pages li,
+    .productlist-item-count,
+    .productlist-filter label,
+    .ecom-productslist-title,
+    .ecom-product-title,
+    .ecom-product-price,
+    .ecom-product-category,
+    .widget.ecomproduct .ecom-product .ecom-product-vartitle,
+    .widget.ecomproduct .ecom-product .ecom-product-category,
+    .widget.ecomproduct .ecom-product .ecom-product-tag,
+    .ecom-product-long-description,
+    .basket-summary-title,
+    .basket-summary-empty-copy,
+    .ecombasketsummary th,
+    .widget.ecombasketsummary .basket-summary-pricepu,
+    .widget.ecombasketsummary .basket-summary-amount,
+    .widget.ecombasketsummary .basket-summary-quantity .basket-summary-quantity-text,
+    .widget.ecombasketsummary .basket-summary-productname {
+        color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+    }
+
+    // Other Elements
+    td,
+    .phone-number-link,
+    .clicktocall__label,
+    .dropbox__label,
+    .ecomproduct__product-body,
+    .blogpost__post-body {
+        color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+    }
+    
+    // Line
+    hr.line {
+        background-color: contrast(@color--dark, @color--light, @color--accent, 43%);
+    }
+    
+    // Click to call
+    .widget.clicktocall a {
+        color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        
+        @media @mobile {
+            background-color: @color--accent;
+            color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        }
+    }
+}
+
+
+// Accent
+// -----------------------------
+
+.style--accent {
+
+    // Buttons, Line
+    .widget.button button,
+    button.btn,
+    .widget.profile form button,
+    .btn,
+    .widget.dropbox button,
+    .checkout-order-button,
+    .checkout-empty-link,
+    .widget.tweet a,
+    .widget.paypalbuynow .widget.button.paypal,
+    .blog-post-more-link a,
+    .ecombasket-checkout-link,
+    .widget.ecomcheckout .checkout-order-button,
+    .blog-list-footer.bk-footer a,
+    .blogsearch form button,
+    .productlist-search button,
+    .widget.ecombasket .ecombasket-pull,
+    .widget.signupform fieldset button.btn,
+    hr.line {
+        background-color: @color--dark;
+        color: contrast(@color--dark, @color--light, @color--accent, 43%);
+    }
+
+    // Social Icon Widget - Icon Colour
+    .widget.socialicons .icons a {
+        background-color: @color--dark;
+    }
+
+    // Typography - Headings
+    .content,
+    .contentgroup {
+        h1, h2, h3, h4, h5 {
+            color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        }
+    }
+
+    // Typgraphy - Body
+    .content,
+    .contentgroup {
+        p, li, a, blockquote, h6 {
+            color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+        }
+    }
+     .productlist-pagination-pages li,
+    .productlist-item-count,
+    .productlist-filter label,
+    .ecom-productslist-title,
+    .ecom-product-title,
+    .ecom-product-price,
+    .ecom-product-category,
+    .widget.ecomproduct .ecom-product .ecom-product-vartitle,
+    .widget.ecomproduct .ecom-product .ecom-product-category,
+    .widget.ecomproduct .ecom-product .ecom-product-tag,
+    .ecom-product-long-description,
+    .basket-summary-title,
+    .basket-summary-empty-copy,
+    .ecombasketsummary th,
+    .widget.ecombasketsummary .basket-summary-pricepu,
+    .widget.ecombasketsummary .basket-summary-amount,
+    .widget.ecombasketsummary .basket-summary-quantity .basket-summary-quantity-text,
+    .widget.ecombasketsummary .basket-summary-productname {
+        color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+    }
+    
+    // Typgraphy - Link
+    a {
+        color: contrast(@color--dark, @color--light, @color--accent, 43%);
+    }
+    
+
+    // Other Elements
+    td,
+    .phone-number-link,
+    .clicktocall__label,
+    .dropbox__label,
+    .ecomproduct__product-body,
+    .blogpost__post-body {
+        color: fade(contrast(@color--dark, @color--light, @color--accent, 43%), 95%);
+    }
+    
+    // Line
+    hr.line {
+        background-color: contrast(@color--dark, @color--light, @color--accent, 43%);
+    }
+    
+    // Click to call
+    .widget.clicktocall a {
+        color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        
+        @media @mobile {
+            background-color: @color--dark;
+            color: contrast(@color--dark, @color--light, @color--accent, 43%);
+        }
+    }
+    
+}
+
+
+

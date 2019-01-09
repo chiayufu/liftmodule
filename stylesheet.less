@@ -10,27 +10,27 @@ body {
   padding: 0;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-  .wrapper {
-    width: 100%;
-    margin: 0;
-  }
-}
+// .wrapper {
+//   width: 90%;
+//   margin: 0 5%;
+//   .wrapper {
+//     width: 100%;
+//     margin: 0;
+//   }
+// }
 
-@media only screen and (min-width: 1140px) {
-  .wrapper {
-    width: 960px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
+// @media only screen and (min-width: 1140px) {
+//   .wrapper {
+//     width: 960px; /* 1140px - 10% for margins */
+//     margin: 0 auto;
+//   }
+// }
 
 .canvas  {
   background-color: darken(@color-swatch1,5%);
-  max-width: 1080px;
-  width: 90%;
-  margin: 0 auto;
+//   max-width: 1080px;
+//   width: 90%;
+//   margin: 0 auto;
   padding: 0 0 60px;
   .widget {
     clear: both;
@@ -511,6 +511,10 @@ button.btn,
 // Ecommerce
 .widget.ecombasket .ecombasket-pull {
     padding: 9px 20px;
+}
+
+.ecom-productlist-info {
+    margin-top: 10px;
 }
 
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
@@ -1239,7 +1243,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
         // Heading Row
         tr:first-child {
             outline: 1px solid darken(@color-swatch1,15%);
-            background-color: @color-swatch1;
             -webkit-border-top-left-radius: 4px;
             -webkit-border-top-right-radius: 4px;
             -moz-border-radius-topleft: 4px;
@@ -1675,3 +1678,5 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 
 
 
+@import "@{templateCommon}/migration/migration.less";
+@import "@{templateCommon}/migration/migration-colour.less";

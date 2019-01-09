@@ -11,12 +11,8 @@
 </header>
 
 <div class="canvas">
-    <div class="main wrapper clearfix">
-        <section>
-            {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
-        </section>
-        {{zone('main')|raw}}
-    </div>
+    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
+    {{zone('main')|raw}}
 </div>
 
 <footer class="bk-footer">
